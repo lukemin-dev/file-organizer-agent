@@ -1,6 +1,10 @@
 # File Organizer Agent
 
+[English](README.md) | [한국어](README.ko.md) | [日本語](README.ja.md)
+
 A Python-based file organization tool that automatically categorizes and organizes files in a directory based on their file extensions. This tool helps maintain a clean and structured file system by grouping similar files into appropriate category folders.
+
+This project was developed using an AI agent-assisted workflow, including planning, implementation, review, testing, and documentation.
 
 ## Features
 
