@@ -201,6 +201,10 @@ pytest tests/test_organizer.py  # 특정 테스트 파일 실행
 
 수동 테스트 절차는 `MANUAL_TESTING.md`를 참조하세요.
 
+## 면접 대비 문서
+
+프로젝트 설명 흐름, 안전한 자동화 설계, 문제 해결 과정, 면접 답변 포인트는 [`docs/interview-notes.md`](./docs/interview-notes.md)에 정리했습니다.
+
 ## 프로젝트 구조
 
 ```
@@ -294,5 +298,4 @@ file-organizer-agent/
 - 실행 취소 기능
 - 파일 관리자와 통합
 - 클라우드 저장소 지원
-- 고급 필터링 옵션</content>
-<parameter name="filePath">/Users/gyuminlee/Desktop/file-organizer-agent/README.ko.md
+- 고급 필터링 옵션

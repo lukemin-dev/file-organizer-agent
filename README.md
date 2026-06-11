@@ -81,6 +81,10 @@ pytest --cov=src --cov-report=html
 
 GitHub Actions runs `pytest` on `main` pushes and pull requests.
 
+## Interview Notes
+
+The project story, design decisions, troubleshooting points, and interview talking points are summarized in [`docs/interview-notes.md`](./docs/interview-notes.md).
+
 ## Project Structure
 
 ```text

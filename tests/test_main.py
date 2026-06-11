@@ -28,6 +28,11 @@ class TestSetupLogging:
         assert len(file_handlers) >= 1
         assert len(stream_handlers) >= 1
 
+        for handler in file_handlers:
+            if getattr(handler, "baseFilename", None) == str(log_file):
+                handler.close()
+                root_logger.removeHandler(handler)
+
 class TestMain:
     def test_main_default_args(self, temp_dir):
         """Test main with default arguments."""

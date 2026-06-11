@@ -118,6 +118,9 @@ class TestEdgeCases:
     
     def test_files_with_only_dots(self, temp_dir):
         """Test handling of files with only dots in name."""
+        if os.name == 'nt':
+            pytest.skip("Windows does not allow creating a file named '...'.")
+
         dots_file = temp_dir / "..."
         dots_file.write_text("content")
         
@@ -189,7 +192,10 @@ class TestEdgeCases:
         
         # Create symlink
         link_file = temp_dir / "link.pdf"
-        link_file.symlink_to(target_file)
+        try:
+            link_file.symlink_to(target_file)
+        except OSError as exc:
+            pytest.skip(f"Symlink creation is not available in this environment: {exc}")
         
         organizer = FileOrganizer(temp_dir, dry_run=True)
         organizer.scan_and_plan()
